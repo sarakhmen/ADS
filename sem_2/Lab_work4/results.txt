@@ -1,0 +1,15 @@
+Iterative version for 100 symbols:
+	Execution time = 0.0001663 seconds
+Recursive version for 100 symbols:
+	Execution time = 0.0002118 seconds
+
+Iterative version for 5000 symbols:
+	Execution time = 0.0061817 seconds
+Recursive version for 5000 symbols:
+	Execution time = 0.0110437 seconds
+
+Iterative version for 8220 symbols:
+	Execution time = 0.0100353 seconds
+Recursive version for 8220 symbols:
+	Execution time = 0.0176358 seconds
+
