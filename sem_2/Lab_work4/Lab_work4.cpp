@@ -5,7 +5,7 @@
 #include <chrono>
 using namespace std;
 
-const string CHARS = "tyuiopasdfghjcvbnm";
+const string chars = "tyuiopasdfghjcvbnm";
 
 void erase_iter(string& txt, string& excl);
 string erase_rec(string& txt, string& excl, int beg_pos);
@@ -22,16 +22,16 @@ int main() {
 		   txt2,
 		   excl = "no";
 	txt1 = txt2 = gen_text(100);
-	fout << "Iterative version for 100 symbols:\n\tExecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
-	fout << "Recursive version for 100 symbols:\n\tExecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
+	fout << "iterative version for 100 symbols:\n\texecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
+	fout << "recursive version for 100 symbols:\n\texecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
 	fout << endl;
 	txt1 = txt2 = gen_text(5000);
-	fout << "Iterative version for 5000 symbols:\n\tExecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
-	fout << "Recursive version for 5000 symbols:\n\tExecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
+	fout << "iterative version for 5000 symbols:\n\texecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
+	fout << "recursive version for 5000 symbols:\n\texecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
 	fout << endl;
 	txt1 = txt2 = gen_text(8220);
-	fout << "Iterative version for 8220 symbols:\n\tExecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
-	fout << "Recursive version for 8220 symbols:\n\tExecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
+	fout << "iterative version for 8220 symbols:\n\texecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
+	fout << "recursive version for 8220 symbols:\n\texecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
 	fout << endl;
 	fout.close();
 	return 0;
@@ -77,7 +77,7 @@ string gen_word() {
 	int len = rand() % 5 + 1;
 	int i;
 	for (i = 0; i < len; ++i)
-		word.push_back(CHARS[rand() % (CHARS.size())]);
+		word.push_back(chars[rand() % (chars.size())]);
 	word.push_back(' ');
 	return word;
 }
@@ -117,6 +117,10 @@ long long evaluate_rec(string& txt, string& excl) {
 
 
 
+
+
+
+
 //void erase_iter(char *text, int &txt_sz, char *to_exclude, int &excl_sz) {
 //	for (int i = 0; i < txt_sz - excl_sz + 1; ++i) {
 //		for (int j = 0; j < excl_sz; ++j) {
@@ -139,3 +143,4 @@ long long evaluate_rec(string& txt, string& excl) {
 //
 //	}
 //}
+

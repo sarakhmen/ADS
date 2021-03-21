@@ -1,0 +1,10 @@
+Reverse every three elements of the LIST of 10 element:
+	Execution time = 5.5e-06 seconds
+Reverse every three elements of the ARRAY of 10 element:
+	Execution time = 9e-07 seconds
+
+Reverse every three elements of the LIST of 10000 element:
+	Execution time = 0.0039941 seconds
+Reverse every three elements of the ARRAY of 10000 element:
+	Execution time = 0.0004311 seconds
+
