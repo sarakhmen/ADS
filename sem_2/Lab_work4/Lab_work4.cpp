@@ -20,7 +20,7 @@ int main() {
 	ofstream fout("results.txt");
 	string txt1,
 		   txt2,
-		   excl = "no";
+		   excl = "no";	
 	txt1 = txt2 = gen_text(100);
 	fout << "iterative version for 100 symbols:\n\texecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
 	fout << "recursive version for 100 symbols:\n\texecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
@@ -29,7 +29,7 @@ int main() {
 	fout << "iterative version for 5000 symbols:\n\texecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
 	fout << "recursive version for 5000 symbols:\n\texecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
 	fout << endl;
-	txt1 = txt2 = gen_text(8220);
+	txt1 = txt2 = gen_text(9000);
 	fout << "iterative version for 8220 symbols:\n\texecution time = " << evaluate_iter(txt1, excl) * 1e-9 << " seconds" << endl;
 	fout << "recursive version for 8220 symbols:\n\texecution time = " << evaluate_rec(txt2, excl) * 1e-9 << " seconds" << endl;
 	fout << endl;
